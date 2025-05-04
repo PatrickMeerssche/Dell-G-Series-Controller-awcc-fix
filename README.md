@@ -34,7 +34,7 @@ Create an udev rule ```/etc/udev/rules.d/00-aw-elc.rules```.
 
 SUBSYSTEM=="usb", ATTRS{idVendor}=="187c", ATTRS{idProduct}=="0550", MODE="0660", TAG+="uaccess", SYMLINK+="awelc"
 ```
-If udev generate an error, then chmod the usb port for the keyboard.
+If udev rules generates an error, then chmod the usb port for the keyboard.
 
 Polkit is required for power and fan related functionality. If it is not already loaded, load the acpi_call module before launching this application.
 ```
